@@ -1,0 +1,30 @@
+- build retdec and try decompiling again.
+	(docker)
+- try sniffing with rvictl (https://useyourloaf.com/blog/remote-packet-capture-for-ios-devices/)
+
+
+used port: 5551
+used protocol: UDP
+first 7 bytes of every connection: "COZ\x03RE\x01"
+
+after that: \x09 or \x0b or \x04 or \x07
+
+than:
+\x2f\x00\x2f\x00
+\x30\x00\x30\x00
+\x31\x00\x31\x00
+\x32\x00\x32\x00
+\x33\x00\x33\x00
+\x36\x00\x37\x00
+\x38\x00\x38\x00
+
+\x50\x00\x50\x00
+\x51\x00\x51\x00
+\x52\x00\x52\x00
+\x53\x00\x53\x00
+\x54\x00\x54\x00
+\x56\x00\x57\x00
+\x59\x00\x59\x00
+\x00\x00\x00\x00
+
+26001aa0ada89cb54098bd4098c15b98bda09cb540069cb5a498bd,4094c59c90cd5d94c54098bd12

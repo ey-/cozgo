@@ -1,14 +1,15 @@
 package main
 
 import (
-	//"io"
-	//"github.com/jfreymuth/oggvorbis"
 	"github.com/ey-/cozgo/connection"
-	//    "encoding/gob"
+	"github.com/ey-/cozgo/messagetypes"
 )
 
 func main() {
 	service := "172.31.1.1:5551"
-	connection.Init()
-	connection.StartListen(service)
+	conn := connection.Connection{}
+	conn.Init()
+	messages := messagetypes.Messages{MessageTypeEnum: messagetypes.NewMessageTypes()}
+	conn.Messages = messages
+	conn.StartListen(service)
 }
